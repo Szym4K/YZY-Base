@@ -1,0 +1,42 @@
+body {
+  font-family: "Space Mono", "IBM Plex Mono", "Roboto Mono", monospace;
+  background-color: #f5f5f2;
+  color: #111111;
+  user-select: none;
+}
+
+.navbar-brand {
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  text-transform: uppercase;
+}
+
+.card {
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+}
+
+.card-img-top,
+.img-fluid {
+  object-fit: cover;
+}
+
+footer {
+  font-size: 0.95rem;
+}
+
+.fade-navbar,
+.fade-content {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+

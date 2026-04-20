@@ -1,0 +1,494 @@
+NOTATKI_DO_OBRONY_STRONY_YZY_BASE.txt
+
+AUTOR NOTATEK: materiał pomocniczy do obrony projektu strony
+TEMAT: wyjaśnienie budowy strony internetowej inspirowanej Ye / YZY
+
+==================================================
+1. O CO CHODZI W TYM PROJEKCIE
+==================================================
+
+Moja strona internetowa jest projektem edukacyjnym wykonanym w HTML, CSS, Bootstrapie i JavaScript.
+Tematycznie dotyczy twórczości Ye (Kanye Westa), jego oficjalnych albumów, niewydanych projektów
+oraz estetyki związanej z marką YZY / YEEZY.
+
+Najważniejsze założenia strony:
+- strona ma być responsywna, czyli dopasowywać się do telefonu, tabletu i komputera,
+- strona ma mieć spójny styl wizualny,
+- strona ma zawierać kilka podstron,
+- strona ma wykorzystywać Bootstrap,
+- strona ma zawierać elementy JavaScript.
+
+Strona główna nie ma być tylko ozdobą, ale centrum projektu.
+Jej zadaniem jest wprowadzenie użytkownika w temat i przekierowanie go do kolejnych sekcji.
+
+==================================================
+2. Z JAKICH TECHNOLOGII KORZYSTAM
+==================================================
+
+1. HTML5
+HTML odpowiada za strukturę strony.
+To w nim tworzę nagłówki, sekcje, przyciski, obrazy, linki, listy i tekst.
+
+2. CSS3
+CSS odpowiada za wygląd strony.
+To w nim ustawiam kolory, marginesy, rozmiary, font, układ sekcji, style kart i responsywność.
+
+3. Bootstrap 5
+Bootstrap jest frameworkiem CSS.
+Pomaga szybciej budować responsywny układ strony dzięki gotowym klasom, np.:
+- container
+- row
+- col-*
+- navbar
+- btn
+- card
+
+Dzięki niemu strona łatwiej dopasowuje się do szerokości ekranu.
+
+4. JavaScript
+JavaScript odpowiada za interaktywność.
+Może być użyty np. do:
+- animacji elementów,
+- odtwarzacza audio,
+- rozwijanego menu,
+- pokazywania i ukrywania treści,
+- reakcji na kliknięcie.
+
+==================================================
+3. CO TO ZNACZY, ŻE STRONA JEST RESPONSYWNA
+==================================================
+
+Responsywność oznacza, że układ strony zmienia się zależnie od urządzenia.
+Na komputerze elementy mogą być obok siebie w kilku kolumnach,
+a na telefonie układają się jeden pod drugim.
+
+Przykład:
+- na dużym ekranie mogę mieć 3 karty w jednym rzędzie,
+- na telefonie te same karty ustawią się jedna pod drugą.
+
+W Bootstrapie osiąga się to przez klasy kolumn, np.:
+- col-12
+- col-md-6
+- col-xl-4
+
+Znaczenie:
+- col-12 = pełna szerokość na bardzo małych ekranach,
+- col-md-6 = połowa szerokości od rozmiaru medium,
+- col-xl-4 = 1/3 szerokości na dużych ekranach.
+
+To pozwala budować nowoczesny i elastyczny layout.
+
+==================================================
+4. JAK DZIAŁA STRUKTURA MAIN.HTML
+==================================================
+
+Plik main.html jest główną stroną projektu.
+Składa się z kilku logicznych części.
+
+----------------------------------
+4.1. Sekcja <head>
+----------------------------------
+
+W sekcji <head> znajdują się informacje techniczne o stronie:
+- kodowanie znaków UTF-8,
+- viewport dla urządzeń mobilnych,
+- tytuł strony,
+- podpięcie Bootstrapa,
+- podpięcie własnego pliku CSS,
+- favicon.
+
+Przykład:
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Znaczenie:
+- UTF-8 pozwala poprawnie wyświetlać polskie znaki,
+- viewport sprawia, że strona dobrze skaluje się na telefonie.
+
+----------------------------------
+4.2. Navbar
+----------------------------------
+
+Navbar to górne menu nawigacyjne.
+Znajdują się w nim:
+- logo lub nazwa strony,
+- linki do podstron,
+- przyciski do zewnętrznych stron, np. Spotify albo YEEZY.
+
+W Bootstrapie navbar może się zwijać na telefonie do ikony hamburgera.
+Dzięki temu menu nie zajmuje za dużo miejsca na małych ekranach.
+
+Najważniejsze klasy:
+- navbar
+- navbar-expand-lg
+- navbar-brand
+- navbar-nav
+- nav-link
+- navbar-toggler
+- collapse
+
+Znaczenie navbar-expand-lg:
+- na dużych ekranach menu jest rozwinięte,
+- na mniejszych ekranach zwija się do przycisku.
+
+----------------------------------
+4.3. Hero section
+----------------------------------
+
+Hero section to pierwsza duża sekcja widoczna po wejściu na stronę.
+Zawiera:
+- tytuł projektu,
+- krótki opis strony,
+- przyciski prowadzące dalej,
+- panel objaśniający temat projektu.
+
+To ważne, bo użytkownik od razu widzi:
+- o czym jest strona,
+- co znajdzie dalej,
+- gdzie może kliknąć.
+
+----------------------------------
+4.4. Sekcje informacyjne
+----------------------------------
+
+Na stronie głównej znajdują się sekcje tematyczne, np.:
+- Kim jest Ye?
+- Czym jest YZY?
+- Etapy twórczości
+- Wyróżnione albumy
+- Niewydane projekty
+- Cel projektu
+
+Dzięki temu strona nie jest pusta.
+Jest jednocześnie estetyczna i informacyjna.
+
+----------------------------------
+4.5. Karty
+----------------------------------
+
+Karty to elementy służące do prezentacji treści w czytelnych blokach.
+
+Przykład zastosowania:
+- karta albumu,
+- karta etapu twórczości,
+- karta niewydanego projektu.
+
+Karta zwykle zawiera:
+- zdjęcie,
+- tytuł,
+- krótki opis.
+
+To wygodne rozwiązanie, bo porządkuje treść i dobrze wygląda na różnych ekranach.
+
+----------------------------------
+4.6. Footer
+----------------------------------
+
+Footer to stopka strony.
+Zwykle zawiera:
+- informację o autorze,
+- informację o charakterze edukacyjnym projektu,
+- ewentualnie datę aktualizacji.
+
+==================================================
+5. JAK DZIAŁA MAIN.CSS
+==================================================
+
+Plik CSS odpowiada za wygląd strony.
+Dzięki niemu strona ma własny styl, a nie tylko domyślny wygląd Bootstrapa.
+
+----------------------------------
+5.1. :root i zmienne CSS
+----------------------------------
+
+W CSS można tworzyć zmienne, np.:
+
+:root {
+  --bg: #f5f5f2;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+}
+
+Po co to się robi?
+- łatwiej utrzymać spójne kolory,
+- łatwiej zmienić styl całej strony,
+- kod jest bardziej uporządkowany.
+
+----------------------------------
+5.2. Styl body
+----------------------------------
+
+W body ustawiam:
+- tło strony,
+- główny kolor tekstu,
+- font,
+- marginesy.
+
+Jeżeli chcę zachować font z mojego projektu,
+mogę ustawić np.:
+font-family: "Space Mono", "IBM Plex Mono", "Roboto Mono", monospace;
+
+To odpowiada za charakter całej strony.
+
+----------------------------------
+5.3. Styl sekcji
+----------------------------------
+
+Sekcje mają zwykle:
+- padding,
+- tło,
+- obramowania,
+- odstępy między blokami.
+
+Przykład:
+.section-space {
+  padding: 4.5rem 0;
+}
+
+Znaczenie:
+- 4.5rem góra-dół,
+- 0 po bokach.
+
+To daje oddech i sprawia, że treść nie jest ściśnięta.
+
+----------------------------------
+5.4. Styl kart
+----------------------------------
+
+Karty mogą mieć:
+- jasne tło,
+- cienką ramkę,
+- delikatny efekt hover,
+- wewnętrzne odstępy.
+
+Przykład:
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+To oznacza, że po najechaniu karta przesuwa się lekko do góry.
+Takie efekty poprawiają odbiór strony, ale nie powinny być przesadzone.
+
+----------------------------------
+5.5. Styl obrazów
+----------------------------------
+
+Obrazy można kontrolować przez:
+- width: 100%;
+- object-fit: cover;
+- aspect-ratio: 1 / 1;
+
+Znaczenie:
+- obraz wypełnia cały blok,
+- nie deformuje się,
+- ma spójne proporcje.
+
+To bardzo ważne przy kartach albumów.
+
+----------------------------------
+5.6. Przyciski
+----------------------------------
+
+Przyciski są stylizowane przez Bootstrap,
+ale można je dopasować własnym CSS.
+
+Na przykład:
+- usunąć zaokrąglenie,
+- ustawić większe odstępy między literami,
+- zmienić wielkość tekstu.
+
+To pomaga dopasować wygląd do klimatu YZY.
+
+==================================================
+6. ROLA BOOTSTRAPA W TYM PROJEKCIE
+==================================================
+
+Bootstrap przyspiesza pracę i pomaga zachować responsywność.
+
+Najważniejsze elementy, które wykorzystuję:
+
+1. container
+To główny pojemnik treści.
+Dzięki niemu zawartość nie rozciąga się za szeroko.
+
+2. row
+Wiersz siatki Bootstrapa.
+
+3. col-*
+Kolumny w siatce.
+To one decydują, ile miejsca zajmuje element na różnych szerokościach ekranu.
+
+4. navbar
+Gotowy komponent menu.
+
+5. btn
+Gotowe style przycisków.
+
+6. card
+Gotowy styl kart.
+
+Bootstrap daje bazę, a własny CSS nadaje indywidualny styl.
+
+==================================================
+7. JAK MOGĘ WYJAŚNIĆ JAVASCRIPT W PROJEKCIE
+==================================================
+
+JavaScript nie musi być na każdej stronie.
+Ważne, żeby był użyty świadomie i miał sens.
+
+Przykładowe zastosowania:
+- odtwarzanie audio na stronie unreleased,
+- animacja pojawiania się sekcji przy przewijaniu,
+- licznik lub filtr,
+- pokazywanie i ukrywanie elementów.
+
+----------------------------------
+7.1. Przykład: animacja sekcji przy scrollu
+----------------------------------
+
+Można użyć IntersectionObserver.
+To mechanizm, który wykrywa, kiedy element pojawia się na ekranie.
+
+Logika działania:
+1. pobieram elementy przez querySelectorAll,
+2. tworzę obserwatora,
+3. kiedy element wejdzie w pole widzenia, dodaję klasę CSS,
+4. CSS odpowiada za efekt wizualny.
+
+To jest dobry przykład połączenia JS i CSS.
+
+----------------------------------
+7.2. Przykład: odtwarzacz audio
+----------------------------------
+
+Na stronie unreleased JavaScript może:
+- wczytywać plik audio,
+- odtwarzać lub pauzować utwór,
+- zmieniać ikonę play/pause,
+- sterować głośnością.
+
+To pokazuje, że JS nie jest dodany sztucznie,
+tylko naprawdę rozszerza funkcjonalność strony.
+
+==================================================
+8. DLACZEGO STRONA GŁÓWNA NIE POWINNA BYĆ PUSTA
+==================================================
+
+Sama estetyka nie wystarczy do dobrej oceny.
+Jeżeli strona główna byłaby tylko minimalistycznym ekranem z tytułem i dwoma linkami,
+mogłaby sprawiać wrażenie niedopracowanej.
+
+Dlatego lepszym rozwiązaniem jest strona typu hub:
+- przedstawia temat,
+- pokazuje strukturę projektu,
+- kieruje do innych podstron,
+- zawiera konkretne treści.
+
+Wtedy projekt wygląda dojrzalej i bardziej świadomie.
+
+==================================================
+9. JAK MOGĘ OPOWIEDZIEĆ NAUCZYCIELOWI O WYGLĄDZIE STRONY
+==================================================
+
+Przykładowe wyjaśnienie:
+
+"Wybrałem stylistykę inspirowaną YZY i Ye, dlatego postawiłem na minimalistyczną kolorystykę,
+dużo bieli, czerni, szarości i techniczny, prosty font. Nie chciałem jednak zrobić pustej strony,
+więc dodałem logiczne sekcje informacyjne, karty i układ responsywny oparty o Bootstrap.
+Dzięki temu strona zachowuje klimat, ale jednocześnie spełnia wymagania szkolne."
+
+==================================================
+10. JAK MOGĘ OPOWIEDZIEĆ O RESPONSYWNOŚCI
+==================================================
+
+Przykładowe wyjaśnienie:
+
+"Responsywność zrobiłem głównie przy pomocy Bootstrapa.
+Użyłem kontenerów, wierszy i kolumn, dzięki czemu układ zmienia się zależnie od szerokości ekranu.
+Na komputerze część sekcji układa się w 2, 3 albo 4 kolumnach,
+a na telefonie elementy przechodzą pod siebie.
+Dodatkowo unikałem sztywnych szerokości, żeby strona mogła się elastycznie skalować."
+
+==================================================
+11. JAK MOGĘ OPOWIEDZIEĆ O PODZIALE PLIKÓW
+==================================================
+
+Przykładowe wyjaśnienie:
+
+"Podzieliłem projekt na osobne pliki, ponieważ to ułatwia porządek w kodzie.
+HTML odpowiada za strukturę,
+CSS za wygląd,
+a JavaScript za interaktywność.
+Dzięki temu kod jest czytelniejszy i łatwiej go rozwijać."
+
+==================================================
+12. NAJCZĘSTSZE PYTANIA, KTÓRE MOŻE ZADAĆ NAUCZYCIEL
+==================================================
+
+1. Dlaczego użyłeś Bootstrapa?
+Odpowiedź:
+Bo przyspiesza tworzenie responsywnego układu i daje gotowe komponenty,
+ale nadal mogę nadać stronie własny styl przez CSS.
+
+2. Co daje viewport w head?
+Odpowiedź:
+Sprawia, że strona poprawnie skaluje się na telefonach i tabletach.
+
+3. Po co oddzielny plik CSS?
+Odpowiedź:
+Żeby oddzielić strukturę od wyglądu i łatwiej zarządzać stylem całej strony.
+
+4. Co robi JavaScript w projekcie?
+Odpowiedź:
+Dodaje interaktywność, np. obsługę audio albo animacje przy przewijaniu.
+
+5. Co znaczy, że strona jest responsywna?
+Odpowiedź:
+Że zmienia układ zależnie od szerokości ekranu i jest wygodna na różnych urządzeniach.
+
+6. Po co używasz klas typu col-12 col-md-6 col-xl-4?
+Odpowiedź:
+Żeby określić, ile miejsca element ma zajmować na różnych rozdzielczościach.
+
+==================================================
+13. GOTOWA KRÓTKA WYPOWIEDŹ DO OBRONY
+==================================================
+
+"Moja strona jest projektem edukacyjnym wykonanym w HTML, CSS, Bootstrapie i JavaScript.
+Tematycznie dotyczy twórczości Ye oraz estetyki YZY.
+HTML wykorzystałem do zbudowania struktury strony, CSS do nadania wyglądu,
+Bootstrap do zrobienia responsywnego układu i gotowych komponentów,
+a JavaScript do dodania interaktywności.
+Strona główna została zaprojektowana jako centrum projektu:
+wprowadza użytkownika w temat, pokazuje najważniejsze sekcje i kieruje do dalszych podstron.
+Całość jest responsywna, więc działa zarówno na komputerze, jak i na telefonie."
+
+==================================================
+14. CO WARTO ZAPAMIĘTAĆ NAJWAŻNIEJSZEGO
+==================================================
+
+- HTML = struktura
+- CSS = wygląd
+- Bootstrap = szybki responsywny layout
+- JavaScript = interakcje
+- Responsywność = dopasowanie do różnych ekranów
+- Strona główna = nie zapychacz, tylko centrum projektu
+- Estetyka YZY = inspiracja wizualna, ale treść musi być konkretna
+
+==================================================
+15. OSTATNIA RADA
+==================================================
+
+Nie próbuj mówić wszystkiego naraz.
+Najlepiej tłumaczyć projekt w kolejności:
+1. temat strony,
+2. technologie,
+3. struktura HTML,
+4. styl CSS,
+5. responsywność,
+6. JavaScript,
+7. powód takiego projektu.
+
+Jeżeli będziesz mówił spokojnie i logicznie,
+nauczyciel zobaczy, że rozumiesz budowę strony i świadomie ją projektujesz.

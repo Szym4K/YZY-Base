@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YZY Base | Unreleased</title>
+    <meta name="description" content="Niewydane projekty Ye w projekcie YZY Base.">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Wspólny CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- CSS unreleased -->
+    <link rel="stylesheet" href="unreleased.css">
+
+    <!-- Ikona -->
+    <link rel="icon" type="image/x-icon" href="img/yeezy_logo.png">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top fade-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">YZY BASE</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="albums.html">Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="unreleased.html">Unreleased</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="fade-content">
+        <!-- HERO -->
+        <section class="unreleased-hero py-5 border-bottom">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-8">
+                        <span class="hero-label">ARCHIVE / CONCEPTS / DEMOS</span>
+                        <h1 class="unreleased-title mt-3 mb-3">Unreleased</h1>
+                        <p class="unreleased-subtitle mb-0">
+                            Niewydane projekty, alternatywne ery i archiwalne koncepcje związane z twórczością Ye.
+                            Kliknij okładkę, aby przełączyć aktywny projekt poniżej.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="project-shortcuts" id="projectShortcuts">
+                            <!-- generowane przez JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTIVE PROJECT -->
+        <section class="unreleased-project-section py-5 border-bottom">
+            <div class="container">
+                <div class="unreleased-project-card">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-4">
+                            <div class="project-main-meta mb-4">
+                                <span class="project-year" id="projectYear">2018</span>
+                                <h2 class="project-name mt-2 mb-2" id="projectName">Yandhi</h2>
+                                <span class="project-status" id="projectStatus">Unreleased project</span>
+                            </div>
+
+                            <div class="project-cover-wrap">
+                                <img id="projectCover" src="img/yandhi_album_cover.jpg" class="project-cover"
+                                    alt="Project cover">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-8">
+                            <div class="project-description-box">
+                                <h3 class="project-section-title mb-3">Opis projektu</h3>
+                                <p class="project-description mb-0" id="projectDescription">
+                                    Opis...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUDIO CONTROLS -->
+        <section class="py-5 border-bottom">
+            <div class="container">
+                <div class="audio-control-box">
+                    <div class="audio-now-playing">
+                        <span class="audio-label">Odtwarzane</span>
+                        <strong id="nowPlayingTitle">Wybierz utwór</strong>
+                        <span id="nowPlayingProject">Brak aktywnego utworu</span>
+                    </div>
+
+                    <div class="audio-main-controls">
+
+                        <button type="button" class="btn btn-dark btn-sm rounded-0" id="playPauseBtn"
+                            aria-label="Play or pause">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="audio-progress-wrap">
+                        <span id="currentTime">0:00</span>
+                        <div class="player-bar" id="playerBar">
+                            <div class="player-bar-fill" id="playerBarFill"></div>
+                        </div>
+                        <span id="duration">0:00</span>
+                    </div>
+
+                    <div class="audio-volume-wrap">
+                        <label for="volumeSlider" class="audio-volume-label">Głośność</label>
+                        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRACKLIST -->
+        <section class="tracklist-section py-5">
+            <div class="container">
+                <div class="tracklist-header mb-4">
+                    <h3 class="mb-2">Lista utworów</h3>
+                </div>
+
+                <div class="tracklist-box" id="tracklistBox">
+                    <!-- generowane przez JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-1">© ALL RIGHTS RESERVED To Szymon Kołodziej</p>
+            <p class="mb-0">Projekt edukacyjny inspirowany twórczością Ye i estetyką YZY</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Wspólny JS -->
+    <script src="main.js"></script>
+
+    <!-- JS unreleased -->
+    <script src="unreleased.js"></script>
+</body>
+
+</html>
