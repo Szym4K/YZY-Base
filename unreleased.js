@@ -20,7 +20,7 @@ const projects = [
         year: "2009",
         title: "Good Ass Job",
         status: "Scrapped",
-        cover: "img/gaj_cover.jpg",
+        cover: "img/GAJ_cover.jpg",
         description: "Tytuł planowanego projektu, który przez długi czas funkcjonował jako kolejny etap po pierwszych albumach akademickiej trylogii, ale ostatecznie został porzucony. W praktyce część jego koncepcji została zastąpiona kierunkiem, który doprowadził do powstania My Beautiful Dark Twisted Fantasy.",
         tracks: [
             { title: "Hell of a Life", duration: "5:55", src: "audio/Good Ass Job/Hell of a Life.mp3"},
